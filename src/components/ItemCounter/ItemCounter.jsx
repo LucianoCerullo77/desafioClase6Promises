@@ -52,7 +52,7 @@ React.useEffect(() => {
   return (
     <div>
         <Button variant='outline-primary' onClick={substract}>-</Button>
-        <span>{amount} Unidades</span>
+        <span>{amount} Amount</span>
         <Button variant='outline-primary' onClick={addUpp}>+</Button>
         <br/>
         <Button variant='success' onClick={addOnCart}>Add on Cart</Button>

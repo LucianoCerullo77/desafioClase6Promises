@@ -3,12 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
-  const products = ""
     const productsCounter = "Total Count = "
   return (
     <div className="App">
         <Header/>
-          <ItemListContainer tittle="Welcome To Fitnesty" products= {products} productsCounter={productsCounter}/>
+          <ItemListContainer tittle="Welcome To Fitnesty" productsCounter={productsCounter}/>
           </div>
   );
 }

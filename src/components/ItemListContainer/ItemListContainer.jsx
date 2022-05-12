@@ -41,9 +41,8 @@ const ItemListContainer = ({tittle,products}) => {
   
   return (
   <div>
-      <h1>{tittle}</h1>
-      <h2>{products}</h2>
-      <ItemList productsList={productsList}/>
+      <h1 style={{textAlign:'center', paddingTop:'2rem'}}>{tittle}</h1>
+      <ItemList productsList={productsList} />
       <Cards/>
       
       </div>
