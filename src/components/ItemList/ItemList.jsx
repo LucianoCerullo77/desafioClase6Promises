@@ -3,6 +3,7 @@ import Item from '../Item/Item'
 
 const ItemList = ({productsList}) => {
     // const {productsList} = props (conviene usar cuando sean mas de 5 elementos)
+    
 
 
   return (

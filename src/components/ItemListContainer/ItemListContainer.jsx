@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from 'react'
-import Cards from '../Cards/Cards'
 import ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = ({tittle,products}) => {
 
   const ItemProducts = [
-    {id:'01', name: 'random1', description:"lorem ipsum"},
-    {id:'02', name: 'random2', description:"lorem ipsum"},
-    {id:'03', name: 'random3', description:"lorem ipsum"},
-    {id:'04', name: 'random4', description:"lorem ipsum"},
-    {id:'05', name: 'random5', description:"lorem ipsum"},
-    {id:'06', name: 'random6', description:"lorem ipsum"}
+    {id:'01', name: 'First Product', description:"Example Text", tags:"Weight, Health"},
+    {id:'02', name: 'Second Product', description:"Example Text", tags:"Weight, Health"},
+    {id:'03', name: 'Third Product', description:"Example Text", tags:"Weight, Health"},
+    {id:'04', name: 'Fourth Product', description:"Example Text", tags:"Weight, Health"},
+    {id:'05', name: 'Fifth Product', description:"Example Text", tags:"Weight, Health"},
+    {id:'06', name: 'Sexth Product', description:"Example Text", tags:"Weight, Health"}
   ]
 
   const [productsList, setproductsList] = useState([])
@@ -43,7 +42,6 @@ const ItemListContainer = ({tittle,products}) => {
   <div>
       <h1 style={{textAlign:'center', paddingTop:'2rem'}}>{tittle}</h1>
       <ItemList productsList={productsList} />
-      <Cards/>
       
       </div>
   )
