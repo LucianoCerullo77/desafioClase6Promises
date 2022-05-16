@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = ({tittle,products}) => {
 
-  const ItemProducts = [
+ /* const ItemProducts = [
     {id:'01', name: 'First Product', description:"Example Text", tags:"Weight, Health"},
     {id:'02', name: 'Second Product', description:"Example Text", tags:"Weight, Health"},
     {id:'03', name: 'Third Product', description:"Example Text", tags:"Weight, Health"},
@@ -13,8 +13,6 @@ const ItemListContainer = ({tittle,products}) => {
   ]
 
   const [productsList, setproductsList] = useState([])
-
-
 
 
   const getProd = new Promise ((resolve, reject ) => {
@@ -34,14 +32,29 @@ const ItemListContainer = ({tittle,products}) => {
     .then((res) => setproductsList(res) )
       .catch((error) => console.log(error))
 
+  }, [])*/
+
+  const [loading, setLoading] = useState(false)
+  const [characters, setCharacters] = useState([])
+
+  // Desafio (Posiblemente se haga de 0 todo el proyecto)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('https://rickandmortyapi.com/api/character')
+    .then((res) => (res.json()))
+    .then((data) => setCharacters(data.results))
+    .catch((error) => console.log(error))
+    .finally(() => setLoading(false))
+
   }, [])
   
-  console.log('Lista de Productos', productsList);
+  
   
   return (
   <div>
       <h1 style={{textAlign:'center', paddingTop:'2rem'}}>{tittle}</h1>
-      <ItemList productsList={productsList} />
+      <ItemList characters={characters}/>
       
       </div>
   )

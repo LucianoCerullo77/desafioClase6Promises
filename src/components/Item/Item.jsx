@@ -2,11 +2,27 @@ import React, {useState} from 'react'
 import { Button, Card } from 'react-bootstrap'
 import ItemCounter from '../ItemCounter/ItemCounter'
 
+const Item = ({character}) => {
 
-const Item = ({Products}) =>  {
+  
+  return(
+    <div className="card" style={{width:'15rem', margin:'1rem'}}>
+      <img src={character.image} className="card-img-top" alt=""/>
+      <div className='card-body'>
+        <p className='card-text'>Character Name : {character.name}</p>
+        <p className='card-text'>Character Species : {character.species}</p>
+        <p className='card-text'>Character Actual Status : {character.status}</p>
+        <p className='card-text'>Character Gender : {character.gender}</p>
+      </div>
+    </div>
+  )
+
+}
+ 
+/* const Item = ({Products}) =>  {
 
     const [show,setShow] = useState (false)
-    // const {greeting, products, productsCounter} = props (Método anterior, no se veía el total counter en el HTML)
+     const {greeting, products, productsCounter} = props (Método anterior, no se veía el total counter en el HTML)
     const seeMore = () => {
       setShow (!show)
       console.log("The Info Button was clicked");
@@ -25,9 +41,11 @@ const Item = ({Products}) =>  {
     </Card.Text>
     <ItemCounter initialValue={1} stock={7}/>
   </Card.Body>
-</Card>
+</Card> 
     </div>
   )
-}
+} 
+
+export default Item */
 
 export default Item
